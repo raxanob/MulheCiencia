@@ -1,0 +1,26 @@
+[
+    {
+        "titulo":"Elisabeth Blackwell",
+        "descricao": "Primeira mulher a receber um diploma em medicina no Estados Unidos"
+    },
+    {
+        "titulo":"Bertha Lutz",
+        "descricao":"Uma das maiores fenistas e biólogas da história brasileira"
+    },
+    {
+        "titulo":"Chien-Shiung Wu",
+        "descricao":"Primeira mulher a se tornar membro da American Physical Society. Estudou o enriquecimento de urânio, trabalhou no Projeto Manhattan e refutou a lei da conservação da paridade."
+    },
+    {
+        "titulo":"Mamie Phipps Clark",
+        "descricao":"Junto com Kenneth, ficou conhecida pelos experimentos com bonecas brancas e negras, que mostraram como o racismo prejudica a autoimagem da população negra. Seu estudo ajudou a acabar com a segregação em escolas públicas em 1954"
+    },
+    {
+        "titulo":"Patricia Bath",
+        "descricao":"Criou tratamentos para catarata e foi cofundadora da American Institute for the Prevention of Blindness. Docentes da Universidade da Califórnia em Los Angeles, Estados Unidos. Foi a primeira professora de oftalmologia da instituição."
+    },
+    {
+        "titulo":"Katherine Johnson",
+        "descricao":"Conseguiu um espaço na sala de reuniões da Nasa. Seu talento para matemática a promoveu para o cargo de líder de cálculos de trajetória e a incluiu em equipes de missões para Lua e Marte."
+    }
+]
