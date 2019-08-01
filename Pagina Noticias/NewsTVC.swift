@@ -20,14 +20,15 @@ class NewsTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return noticias.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ImagemCard") as? NewsCellCard{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "imagemCard") as? NewsCellCard{
             
-//            cell.imagemCardNews.image = UIImage(named: noticias[indexPath.row].imagem)
+//            cell.imagemCardNews.image = UIImage(named: "news")
             
             cell.imagemCardNews.imageFromServerURL(urlString: "https://br-mulheres-na-ciencia.herokuapp.com/imagens/\(noticias[indexPath.row].imagem)") { (s, err) in
                 if (err != nil){
@@ -51,8 +52,16 @@ class NewsTVC: UITableViewController {
             }
         }
     }
-    
+    //Config TableView
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        //retorna o tamanho da celula
+//        return 394
+//    }
+//    
 }
+
+
+
 
 extension UIImageView {
     public func imageFromServerURL(urlString: String, completion: @escaping (String?, Error?) -> Void) {

@@ -98,5 +98,12 @@ class NoticiaTVC: UITableViewController{
         return UITableViewCell()
 
     }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        //retorna o tamanho da celula
+//        if indexPath.section == 0 {
+//            return 404
+//        }
+//        return 0
+//    }
     
 }

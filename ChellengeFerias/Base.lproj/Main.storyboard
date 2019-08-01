@@ -23,6 +23,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="0.52941179279999995" green="0.52941179279999995" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagemCard" rowHeight="414" id="EGQ-rN-v9I" customClass="NewsCellCard" customModule="ChellengeFerias" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="414"/>
@@ -31,14 +34,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R0v-BX-LEN">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardKatie.png" translatesAutoresizingMaskIntoConstraints="NO" id="R0v-BX-LEN">
                                             <rect key="frame" x="10" y="10" width="394" height="394"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="394" id="h2p-QF-Xhy"/>
-                                                <constraint firstAttribute="height" constant="394" id="hCM-BE-iq3"/>
+                                                <constraint firstAttribute="width" constant="394" id="JEC-c8-6hb"/>
+                                                <constraint firstAttribute="height" constant="394" id="uCO-Gl-Fek"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="R0v-BX-LEN" firstAttribute="leading" secondItem="uCl-U9-Qgy" secondAttribute="leading" constant="10" id="M0v-3X-mt2"/>
                                         <constraint firstAttribute="bottom" secondItem="R0v-BX-LEN" secondAttribute="bottom" constant="10" id="QsU-yj-5xu"/>
@@ -46,9 +50,9 @@
                                         <constraint firstAttribute="trailing" secondItem="R0v-BX-LEN" secondAttribute="trailing" constant="10" id="rbf-gP-EI0"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="imagemCardNews" destination="R0v-BX-LEN" id="Vc5-ur-f7h"/>
+                                    <outlet property="imagemCardNews" destination="R0v-BX-LEN" id="ouy-bb-Xh4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,22 +80,26 @@
                         <color key="sectionIndexBackgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.91506147380000002" green="0.4306855798" blue="0.1802905202" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagemPessoa" rowHeight="450" id="USH-0v-7Wj" customClass="NoticiaCellFoto" customModule="ChellengeFerias" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="450"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagemPessoa" rowHeight="423" id="USH-0v-7Wj" customClass="NoticiaCellFoto" customModule="ChellengeFerias" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="423"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="USH-0v-7Wj" id="lje-kE-UYq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="449.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="USH-0v-7Wj" id="lje-kE-UYq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="422.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BK9-aE-8Ou">
-                                            <rect key="frame" x="5" y="5" width="404" height="439.5"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardKatie.png" translatesAutoresizingMaskIntoConstraints="NO" id="BK9-aE-8Ou">
+                                            <rect key="frame" x="5" y="5" width="404" height="404"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="404" id="U2J-nm-EU8"/>
+                                                <constraint firstAttribute="height" constant="404" id="w8a-02-dIF"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="BK9-aE-8Ou" secondAttribute="bottom" constant="5" id="5Ac-G0-NDX"/>
-                                        <constraint firstItem="BK9-aE-8Ou" firstAttribute="leading" secondItem="lje-kE-UYq" secondAttribute="leading" constant="5" id="Ojj-s5-9AF"/>
-                                        <constraint firstAttribute="trailing" secondItem="BK9-aE-8Ou" secondAttribute="trailing" constant="5" id="UNh-1J-NO3"/>
-                                        <constraint firstItem="BK9-aE-8Ou" firstAttribute="top" secondItem="lje-kE-UYq" secondAttribute="top" constant="5" id="Wxk-Vx-geX"/>
+                                        <constraint firstAttribute="trailing" secondItem="BK9-aE-8Ou" secondAttribute="trailing" constant="5" id="94f-Hd-eNT"/>
+                                        <constraint firstAttribute="bottom" secondItem="BK9-aE-8Ou" secondAttribute="bottom" constant="5" id="F3w-He-41z"/>
+                                        <constraint firstItem="BK9-aE-8Ou" firstAttribute="leading" secondItem="lje-kE-UYq" secondAttribute="leading" constant="5" id="i4F-kL-3Rs"/>
+                                        <constraint firstItem="BK9-aE-8Ou" firstAttribute="top" secondItem="lje-kE-UYq" secondAttribute="top" constant="5" id="lg4-b8-drD"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -100,7 +108,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Titulo" id="WYn-Pr-kKn" customClass="NoticiaCellTitulo" customModule="ChellengeFerias" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="478" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="451" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WYn-Pr-kKn" id="xfl-Bv-TsA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -126,7 +134,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Conteudo" id="qyA-jM-yNn" customClass="NoticiaConteudoCell" customModule="ChellengeFerias" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="522" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="495" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qyA-jM-yNn" id="Cpm-zj-8bj">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -199,7 +207,7 @@
         <scene sceneID="8TG-rw-BmF">
             <objects>
                 <tableViewController id="ESQ-74-WYD" customClass="CientistasTVC" customModule="ChellengeFerias" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kNI-OW-rY2">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kNI-OW-rY2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="751.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -270,7 +278,7 @@
         <scene sceneID="6xD-sz-f7S">
             <objects>
                 <tableViewController id="KQn-mz-05q" customClass="NotificacoesTVC" customModule="ChellengeFerias" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sGs-kB-3kR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="static" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sGs-kB-3kR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="665.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -418,7 +426,7 @@
                 <navigationController id="zhz-3d-bxc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notificações" image="notification" landscapeImage="notification" largeContentSizeImage="notification" selectedImage="notification" id="iyf-Ji-XP2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="mD0-3k-hAX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="103.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -519,7 +527,7 @@
                 <navigationController id="OSS-S2-dPO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cientistas" id="TaY-nk-6V7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="ObU-Qn-E0b">
-                        <rect key="frame" x="0.0" y="44" width="414" height="100.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="103.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.94116359949999995" green="0.9452058673" blue="0.93725508449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.94116359949999995" green="0.9452058673" blue="0.93725508449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -564,6 +572,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cardKatie.png" width="500" height="502"/>
         <image name="news" width="25" height="25"/>
         <image name="notification" width="30" height="30"/>
     </resources>
