@@ -30,7 +30,9 @@ class NewsTVC: UITableViewController {
 //            cell.imagemCardNews.image = UIImage(named: noticias[indexPath.row].imagem)
             
             cell.imagemCardNews.imageFromServerURL(urlString: "https://br-mulheres-na-ciencia.herokuapp.com/imagens/\(noticias[indexPath.row].imagem)") { (s, err) in
-                print("Erro em baixar a imagem.")
+                if (err != nil){
+                    print("Erro em baixar a imagem.")
+                }
             }
             
             return cell

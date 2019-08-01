@@ -28,10 +28,10 @@
 		E07FDA9B22E2989D00FBB5AB /* NoticiaCellFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07FDA9A22E2989D00FBB5AB /* NoticiaCellFoto.swift */; };
 		E07FDA9D22E29AAA00FBB5AB /* NoticiaConteudoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07FDA9C22E29AAA00FBB5AB /* NoticiaConteudoCell.swift */; };
 		E0BAA7BC22EB3F74008E1AA1 /* NoticiaCellTitulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BAA7BB22EB3F74008E1AA1 /* NoticiaCellTitulo.swift */; };
-		E0BAA88322EE30B9008E1AA1 /* Notification+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BAA88122EE30B9008E1AA1 /* Notification+CoreDataProperties.swift */; };
-		E0BAA88422EE30B9008E1AA1 /* Notification+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BAA88222EE30B9008E1AA1 /* Notification+CoreDataClass.swift */; };
 		E0BAA88622EE30C2008E1AA1 /* Notifications.json in Resources */ = {isa = PBXBuildFile; fileRef = E0BAA88522EE30C2008E1AA1 /* Notifications.json */; };
 		E0BAA88A22EE338B008E1AA1 /* NotificacoesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BAA88922EE338B008E1AA1 /* NotificacoesTVC.swift */; };
+		E0BAA88E22EF6B0E008E1AA1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BAA88D22EF6B0E008E1AA1 /* Notifications.swift */; };
+		E0BAA89022F26391008E1AA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0BAA88F22F26391008E1AA1 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,10 +79,10 @@
 		E07FDA9A22E2989D00FBB5AB /* NoticiaCellFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiaCellFoto.swift; sourceTree = "<group>"; };
 		E07FDA9C22E29AAA00FBB5AB /* NoticiaConteudoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiaConteudoCell.swift; sourceTree = "<group>"; };
 		E0BAA7BB22EB3F74008E1AA1 /* NoticiaCellTitulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiaCellTitulo.swift; sourceTree = "<group>"; };
-		E0BAA88122EE30B9008E1AA1 /* Notification+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		E0BAA88222EE30B9008E1AA1 /* Notification+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E0BAA88522EE30C2008E1AA1 /* Notifications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Notifications.json; sourceTree = "<group>"; };
 		E0BAA88922EE338B008E1AA1 /* NotificacoesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacoesTVC.swift; sourceTree = "<group>"; };
+		E0BAA88D22EF6B0E008E1AA1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		E0BAA88F22F26391008E1AA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				E0BAA88522EE30C2008E1AA1 /* Notifications.json */,
+				E0BAA88D22EF6B0E008E1AA1 /* Notifications.swift */,
 				E0BAA88922EE338B008E1AA1 /* NotificacoesTVC.swift */,
-				E0BAA88222EE30B9008E1AA1 /* Notification+CoreDataClass.swift */,
-				E0BAA88122EE30B9008E1AA1 /* Notification+CoreDataProperties.swift */,
 				E07FDAA322E63DF100FBB5AB /* Pagina Noticias */,
 				E07FDAA222E63DD100FBB5AB /* Pagina Cientista */,
 				E05D5D3D22D8F301002BD4EF /* ChellengeFerias */,
@@ -145,6 +144,7 @@
 				E05D5D4522D8F303002BD4EF /* Assets.xcassets */,
 				E05D5D4722D8F303002BD4EF /* LaunchScreen.storyboard */,
 				E05D5D4A22D8F303002BD4EF /* Info.plist */,
+				E0BAA88F22F26391008E1AA1 /* Images.xcassets */,
 			);
 			path = ChellengeFerias;
 			sourceTree = "<group>";
@@ -301,6 +301,7 @@
 			files = (
 				E05D5D4922D8F303002BD4EF /* LaunchScreen.storyboard in Resources */,
 				E05D5D4622D8F303002BD4EF /* Assets.xcassets in Resources */,
+				E0BAA89022F26391008E1AA1 /* Images.xcassets in Resources */,
 				E0BAA88622EE30C2008E1AA1 /* Notifications.json in Resources */,
 				E07FDA6122E0149300FBB5AB /* teste2.json in Resources */,
 				E07FDA5122DCDDC900FBB5AB /* Anonymous_Pro_B.ttf in Resources */,
@@ -331,16 +332,15 @@
 			files = (
 				E07FDA9322E282B600FBB5AB /* NewsCellCard.swift in Sources */,
 				E07FDA8922E27B7000FBB5AB /* CientistasTVC.swift in Sources */,
-				E0BAA88322EE30B9008E1AA1 /* Notification+CoreDataProperties.swift in Sources */,
 				E07FDA8B22E27B9800FBB5AB /* PerfilCientTVC.swift in Sources */,
 				E07FDA6822E2569600FBB5AB /* Carreira.swift in Sources */,
 				E07FDA9722E2895C00FBB5AB /* NewsTVC.swift in Sources */,
 				E07FDA8F22E27E9700FBB5AB /* PerfilCientCellImagem.swift in Sources */,
 				E07FDA9D22E29AAA00FBB5AB /* NoticiaConteudoCell.swift in Sources */,
 				E07FDA8D22E27C8A00FBB5AB /* CientistasCell.swift in Sources */,
-				E0BAA88422EE30B9008E1AA1 /* Notification+CoreDataClass.swift in Sources */,
 				E07FDA9122E27F7500FBB5AB /* PerfilCientCellLabel.swift in Sources */,
 				E07FDA9522E283A000FBB5AB /* News.swift in Sources */,
+				E0BAA88E22EF6B0E008E1AA1 /* Notifications.swift in Sources */,
 				E0BAA88A22EE338B008E1AA1 /* NotificacoesTVC.swift in Sources */,
 				E05D5D3F22D8F301002BD4EF /* AppDelegate.swift in Sources */,
 				E07FDA9922E28F6D00FBB5AB /* NoticiaTVC.swift in Sources */,
@@ -519,7 +519,7 @@
 		E05D5D6422D8F303002BD4EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUT3745C65;
 				INFOPLIST_FILE = ChellengeFerias/Info.plist;
@@ -530,14 +530,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = TableView.ChellengeFerias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E05D5D6522D8F303002BD4EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUT3745C65;
 				INFOPLIST_FILE = ChellengeFerias/Info.plist;
@@ -548,7 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = TableView.ChellengeFerias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -69,7 +69,9 @@ class NoticiaTVC: UITableViewController{
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ImagemPessoa", for: indexPath) as? NoticiaCellFoto {
 //                cell.ImagemNoticia.image = UIImage(named: reportagem.imagem)
                 cell.ImagemNoticia.imageFromServerURL(urlString: "https://br-mulheres-na-ciencia.herokuapp.com/imagens/\(reportagem.imagem2)") { (r, erro) in
+                    if (erro != nil){
                     print("Erro em baixar a imagem.")
+                    }
                 }
                 return cell
             }

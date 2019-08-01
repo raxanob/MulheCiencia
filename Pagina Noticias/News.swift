@@ -29,7 +29,7 @@ class InternNew: NSObject {
                 let noticiasData = try Data(contentsOf: url2 as! URL)
                 noticias = try JSONDecoder().decode([New].self, from: noticiasData)
                 return noticias
-            
+
         } catch {
             print("\(error.localizedDescription)")
             
