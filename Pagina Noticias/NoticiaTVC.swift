@@ -8,15 +8,41 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class NoticiaTVC: UITableViewController{
     
     var reportagem: New!
+    var noticiaSalva = [NewsSave]()
+    var hideButton = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = reportagem.titulo
+        
+        let fetchRequest:NSFetchRequest<NewsSave>
     }
+    
+    
+    
+    @IBAction func saveButton(_ sender: Any) {
+        reportagem.create()
+//        let newsSave = NSEntityDescription.insertNewObject(forEntityName: "NewsSave", into: PermanenceService.context) as! NewsSave
+//        newsSave.titulo = reportagem.titulo
+//        newsSave.subtitulo = reportagem.subtitulo
+//        newsSave.texto = reportagem.texto
+//        newsSave.imagem = reportagem.imagem
+//        newsSave.imagem2 = reportagem.imagem2
+//        hideButton = true
+//
+//        PermanenceService.saveContext()
+//        self.noticiaSalva.append(newsSave)
+        
+        tableView.reloadData()
+        
+        
+    }
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -71,8 +97,18 @@ class NoticiaTVC: UITableViewController{
                 cell.ImagemNoticia.imageFromServerURL(urlString: "https://br-mulheres-na-ciencia.herokuapp.com/imagens/\(reportagem.imagem2)") { (r, erro) in
                     if (erro != nil){
                     print("Erro em baixar a imagem.")
+                    } else {
+                        
+                        if let data = cell.ImagemNoticia.image?.pngData() {
+                            let filename = self.getDocumentsDirectory().appendingPathComponent(self.reportagem.imagem2)
+                            try? data.write(to: filename)
+                        }
                     }
                 }
+                if hideButton{
+                cell.savebutton.isHidden = true
+                }
+                
                 return cell
             }
             
@@ -98,12 +134,10 @@ class NoticiaTVC: UITableViewController{
         return UITableViewCell()
 
     }
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        //retorna o tamanho da celula
-//        if indexPath.section == 0 {
-//            return 404
-//        }
-//        return 0
-//    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
     
 }

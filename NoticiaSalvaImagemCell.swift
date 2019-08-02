@@ -1,26 +1,23 @@
 //
-//  CientistasCell.swift
+//  NoticiaSalvaImagemCell.swift
 //  ChellengeFerias
 //
-//  Created by Rayane Xavier on 19/07/19.
+//  Created by Rayane Xavier on 02/08/19.
 //  Copyright © 2019 Rayane Xavier. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class CientistasCell: UITableViewCell{
+class NoticiaSalvaImagemCell: UITableViewCell{
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    @IBOutlet weak var fotoCientista: UIImageView!
-    
-    @IBOutlet weak var nomeCientista: UILabel!
-    
-    
-    @IBOutlet weak var especializacaoCientista: UILabel!
+    @IBOutlet weak var imagemNoticiaSalva: UIImageView!
     
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,4 +25,6 @@ class CientistasCell: UITableViewCell{
         
         // Configure the view for the selected state
     }
+    
+    
 }

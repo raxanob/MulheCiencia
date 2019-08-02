@@ -1,23 +1,23 @@
 //
-//  PerfilCientCellLabel.swift
+//  NoticiasSalvasCellCard.swift
 //  ChellengeFerias
 //
-//  Created by Rayane Xavier on 19/07/19.
+//  Created by Rayane Xavier on 02/08/19.
 //  Copyright © 2019 Rayane Xavier. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class PerfilCientCellLabel: UITableViewCell{
+class NoticiasSalvasCellCard: UITableViewCell{
+
+    
+    @IBOutlet weak var imagemCardNoticiaSalva: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    @IBOutlet weak var LabelPerfil: UILabel!
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -17,6 +17,10 @@ class NewsTVC: UITableViewController {
         super.viewDidLoad()
         
         noticias = InternNew.getAllNew()
+        
+//        for noticia in noticias{
+//            noticia.create()
+//        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,9 +37,14 @@ class NewsTVC: UITableViewController {
             cell.imagemCardNews.imageFromServerURL(urlString: "https://br-mulheres-na-ciencia.herokuapp.com/imagens/\(noticias[indexPath.row].imagem)") { (s, err) in
                 if (err != nil){
                     print("Erro em baixar a imagem.")
+                } else{
+                    if let data = cell.imagemCardNews.image?.pngData() {
+                        let filename = self.getDocumentsDirectory().appendingPathComponent(self.noticias[indexPath.row].imagem)
+                        try? data.write(to: filename)
+                    }
                 }
             }
-            
+        
             return cell
         }
         return UITableViewCell()
@@ -52,12 +61,12 @@ class NewsTVC: UITableViewController {
             }
         }
     }
-    //Config TableView
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        //retorna o tamanho da celula
-//        return 394
-//    }
-//    
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
 }
 
 
