@@ -20,29 +20,43 @@ class NoticiaTVC: UITableViewController{
         super.viewDidLoad()
         navigationItem.title = reportagem.titulo
         
-        let fetchRequest:NSFetchRequest<NewsSave>
+        heartImages = createImageArray(total: 5, imagePrefix: "Favoritar")
+
+        
     }
     
-    
+    var heartImages: [UIImage] = []
     
     @IBAction func saveButton(_ sender: Any) {
-        reportagem.create()
-//        let newsSave = NSEntityDescription.insertNewObject(forEntityName: "NewsSave", into: PermanenceService.context) as! NewsSave
-//        newsSave.titulo = reportagem.titulo
-//        newsSave.subtitulo = reportagem.subtitulo
-//        newsSave.texto = reportagem.texto
-//        newsSave.imagem = reportagem.imagem
-//        newsSave.imagem2 = reportagem.imagem2
-//        hideButton = true
-//
-//        PermanenceService.saveContext()
-//        self.noticiaSalva.append(newsSave)
         
+        reportagem.create()
+
         tableView.reloadData()
         
         
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? NoticiaCellFoto
+        animate(imageView: cell!.favoritarImagem, image: heartImages)
     }
     
+    func createImageArray(total: Int, imagePrefix: String) -> [UIImage]{
+        
+        var imageArray: [UIImage] = []
+        
+        for imageCount in 1..<total {
+            let imageName = "\(imagePrefix)\(imageCount).png"
+            let image = UIImage(named: imageName)!
+            
+            imageArray.append(image)
+        }
+        return imageArray
+    }
+    
+    func animate(imageView: UIImageView, image: [UIImage]){
+        imageView.animationImages = image
+        imageView.animationDuration = 1.0
+        imageView.animationRepeatCount = 1
+        imageView.startAnimating()
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3

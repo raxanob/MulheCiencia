@@ -17,7 +17,11 @@ class NoticiaCellFoto: UITableViewCell {
     
     
     @IBOutlet weak var ImagemNoticia: UIImageView!
+    
     @IBOutlet weak var savebutton: UIButton!
+    
+    @IBOutlet weak var favoritarImagem: UIImageView!
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

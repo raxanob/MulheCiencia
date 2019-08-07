@@ -18,9 +18,6 @@ class NewsTVC: UITableViewController {
         
         noticias = InternNew.getAllNew()
         
-//        for noticia in noticias{
-//            noticia.create()
-//        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

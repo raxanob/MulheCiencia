@@ -43,7 +43,9 @@ class NotificacoesTVC: UITableViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var switchNotification: UISwitch!
     
     @IBAction func buttonEnviar(_ sender: Any) {
-        
+        do {
+            notificationCenter.removeDeliveredNotifications(withIdentifiers: ["NotificacaoCell"])
+        } catch{
         //        som
         if switchSom.isOn{
             
@@ -52,14 +54,10 @@ class NotificacoesTVC: UITableViewController, UIPickerViewDelegate, UIPickerView
         
         //        Notification
         if switchNotification.isOn == false {
-            
             notificationCenter.removeDeliveredNotifications(withIdentifiers: ["NotificacaoCell"])
             
         }
-        
-        //picker
-        
-    
+
         //Nas variáveis abaixo definimos o corpo da mensagem
         var not = InternNotif.getAllNotif()
         
@@ -80,7 +78,6 @@ class NotificacoesTVC: UITableViewController, UIPickerViewDelegate, UIPickerView
             print("horas")
             tempo = tempo * 3600 * Double(pickerSelectedVezes)!
             
-            
         } else if pickerSelectedTempo == self.tempo[1] {
             print("dias")
             tempo = tempo * 86400 * Double(pickerSelectedVezes)!
@@ -93,7 +90,7 @@ class NotificacoesTVC: UITableViewController, UIPickerViewDelegate, UIPickerView
         
         navigationController?.popViewController(animated: true)
         
-        
+        }
     }
     
     let content = UNMutableNotificationContent()
