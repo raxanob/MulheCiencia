@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
+
 struct New: Codable {
     var _id: String
     var titulo: String

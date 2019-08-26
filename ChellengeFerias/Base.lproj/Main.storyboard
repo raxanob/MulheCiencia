@@ -94,13 +94,11 @@
                                                 <constraint firstAttribute="height" constant="404" id="w8a-02-dIF"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Favoritar1" translatesAutoresizingMaskIntoConstraints="NO" id="cIe-9Q-ALj">
-                                            <rect key="frame" x="334" y="11" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Favoritar1" translatesAutoresizingMaskIntoConstraints="NO" id="cIe-9Q-ALj">
+                                            <rect key="frame" x="330" y="31" width="64" height="56"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP8-6f-Y4d">
-                                            <rect key="frame" x="332" y="13" width="64" height="56"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP8-6f-Y4d">
+                                            <rect key="frame" x="330" y="31" width="64" height="56"/>
                                             <state key="normal" image="Favoritar1"/>
                                             <connections>
                                                 <action selector="saveButton:" destination="xhi-Sr-kF5" eventType="touchUpInside" id="ShF-hG-lfq"/>
@@ -110,8 +108,15 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="BK9-aE-8Ou" secondAttribute="trailing" constant="5" id="94f-Hd-eNT"/>
                                         <constraint firstAttribute="bottom" secondItem="BK9-aE-8Ou" secondAttribute="bottom" constant="5" id="F3w-He-41z"/>
+                                        <constraint firstItem="cIe-9Q-ALj" firstAttribute="centerY" secondItem="QP8-6f-Y4d" secondAttribute="centerY" id="JMn-eO-51c"/>
+                                        <constraint firstItem="cIe-9Q-ALj" firstAttribute="height" secondItem="QP8-6f-Y4d" secondAttribute="height" id="Sbs-Zx-idG"/>
+                                        <constraint firstItem="cIe-9Q-ALj" firstAttribute="width" secondItem="QP8-6f-Y4d" secondAttribute="width" id="SfV-85-7ae"/>
+                                        <constraint firstItem="cIe-9Q-ALj" firstAttribute="centerX" secondItem="QP8-6f-Y4d" secondAttribute="centerX" id="dQF-qB-mk8"/>
                                         <constraint firstItem="BK9-aE-8Ou" firstAttribute="leading" secondItem="lje-kE-UYq" secondAttribute="leading" constant="5" id="i4F-kL-3Rs"/>
+                                        <constraint firstItem="QP8-6f-Y4d" firstAttribute="top" secondItem="lje-kE-UYq" secondAttribute="topMargin" constant="20" id="igf-N0-udI"/>
+                                        <constraint firstItem="cIe-9Q-ALj" firstAttribute="width" secondItem="QP8-6f-Y4d" secondAttribute="height" multiplier="8:7" id="jpq-Q1-We4"/>
                                         <constraint firstItem="BK9-aE-8Ou" firstAttribute="top" secondItem="lje-kE-UYq" secondAttribute="top" constant="5" id="lg4-b8-drD"/>
+                                        <constraint firstAttribute="trailing" secondItem="QP8-6f-Y4d" secondAttribute="trailing" constant="20" id="nRi-fu-87b"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -224,7 +229,7 @@
         <scene sceneID="6xD-sz-f7S">
             <objects>
                 <tableViewController id="KQn-mz-05q" customClass="NotificacoesTVC" customModule="ChellengeFerias" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="static" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sGs-kB-3kR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sGs-kB-3kR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="665.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.21190345290000001" green="0.207413137" blue="0.23137587309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
