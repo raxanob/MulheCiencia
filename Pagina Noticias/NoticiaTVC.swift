@@ -21,7 +21,6 @@ class NoticiaTVC: UITableViewController{
         navigationItem.title = reportagem.titulo
         
         heartImages = createImageArray(total: 5, imagePrefix: "Favoritar")
-
         
     }
     
@@ -33,13 +32,11 @@ class NoticiaTVC: UITableViewController{
 
         tableView.reloadData()
         
-        
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? NoticiaCellFoto
         animate(imageView: cell!.favoritarImagem, image: heartImages)
     }
     
     func createImageArray(total: Int, imagePrefix: String) -> [UIImage]{
-        
         var imageArray: [UIImage] = []
         
         for imageCount in 1..<total {
@@ -107,7 +104,6 @@ class NoticiaTVC: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ImagemPessoa", for: indexPath) as? NoticiaCellFoto {
-//                cell.ImagemNoticia.image = UIImage(named: reportagem.imagem)
                 cell.ImagemNoticia.imageFromServerURL(urlString: "https://br-mulheres-na-ciencia.herokuapp.com/imagens/\(reportagem.imagem2)") { (r, erro) in
                     if (erro != nil){
                     print("Erro em baixar a imagem.")
@@ -122,7 +118,6 @@ class NoticiaTVC: UITableViewController{
                 if hideButton{
                 cell.savebutton.isHidden = true
                 }
-                
                 return cell
             }
             
@@ -146,7 +141,6 @@ class NoticiaTVC: UITableViewController{
             }
         }
         return UITableViewCell()
-
     }
     
     func getDocumentsDirectory() -> URL {

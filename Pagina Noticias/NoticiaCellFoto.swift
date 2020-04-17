@@ -15,7 +15,6 @@ class NoticiaCellFoto: UITableViewCell {
         // Initialization code
     }
     
-    
     @IBOutlet weak var ImagemNoticia: UIImageView!
     
     @IBOutlet weak var savebutton: UIButton!

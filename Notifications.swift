@@ -9,12 +9,10 @@
 import Foundation
 import UIKit
 
-
 struct Notification: Codable {
     var titulo: String
     var descricao: String
 }
-
 
 class InternNotif: NSObject {
     static func getAllNotif() -> [Notification] {

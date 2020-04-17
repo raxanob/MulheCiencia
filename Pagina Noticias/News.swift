@@ -33,7 +33,6 @@ struct New: Codable {
         news.setValue(self.imagem, forKeyPath: "imagem")
         news.setValue(self.imagem2, forKeyPath: "imagem2")
         
-        
         do {
             try managedContext.save()
         }
@@ -41,9 +40,7 @@ struct New: Codable {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
-    
-    
-    
+
     func update(){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -87,19 +84,17 @@ struct New: Codable {
         
         fetchRequest.predicate = NSPredicate(format: "id = %@", self._id)
         
-        do
-        {
+        do {
             let test = try managedContext.fetch(fetchRequest)
             if(test.count != 0){
                 let objectToDelete = test[0] as? NSManagedObject
                 
                 if(objectToDelete != nil){
                     managedContext.delete(objectToDelete!)
-                    do{
+                    do {
                         try managedContext.save()
                     }
-                    catch
-                    {
+                    catch {
                         print(error)
                     }
                 }
@@ -113,8 +108,6 @@ struct New: Codable {
             print(error)
         }
     }
-    
-    
 }
 
 class InternNew: NSObject {
@@ -124,13 +117,11 @@ class InternNew: NSObject {
              let path = "https://br-mulheres-na-ciencia.herokuapp.com/api/noticias"
             
                 let url2 = URL(string: path)
-                let noticiasData = try Data(contentsOf: url2 as! URL)
+            let noticiasData = try Data(contentsOf: url2!)
                 noticias = try JSONDecoder().decode([New].self, from: noticiasData)
                 return noticias
-
         } catch {
             print("\(error.localizedDescription)")
-            
         }
         return noticias
     }

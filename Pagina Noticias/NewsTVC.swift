@@ -15,22 +15,16 @@ class NewsTVC: UITableViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        
         noticias = InternNew.getAllNew()
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return noticias.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "imagemCard") as? NewsCellCard{
-            
-//            cell.imagemCardNews.image = UIImage(named: "news")
-            
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "imagemCard") as? NewsCellCard {
             cell.imagemCardNews.imageFromServerURL(urlString: "https://br-mulheres-na-ciencia.herokuapp.com/imagens/\(noticias[indexPath.row].imagem)") { (s, err) in
                 if (err != nil){
                     print("Erro em baixar a imagem.")
@@ -41,7 +35,6 @@ class NewsTVC: UITableViewController {
                     }
                 }
             }
-        
             return cell
         }
         return UITableViewCell()
@@ -63,7 +56,6 @@ class NewsTVC: UITableViewController {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
-    
 }
 
 
@@ -89,6 +81,6 @@ extension UIImageView {
                 self.image = image
                 completion("1", nil)
             })
-            
         }).resume()
-    }}
+    }
+}

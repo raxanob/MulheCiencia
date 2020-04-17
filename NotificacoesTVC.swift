@@ -31,8 +31,6 @@ class NotificacoesTVC: UITableViewController, UIPickerViewDelegate, UIPickerView
         tableView.tableFooterView = UIView()
     }
     
-    
-    
     @IBOutlet weak var pickerTempo: UIPickerView!
     
     var pickerSelectedVezes = ""
@@ -45,51 +43,43 @@ class NotificacoesTVC: UITableViewController, UIPickerViewDelegate, UIPickerView
     @IBAction func buttonEnviar(_ sender: Any) {
         do {
             notificationCenter.removeDeliveredNotifications(withIdentifiers: ["NotificacaoCell"])
-        } catch{
-        //        som
-        if switchSom.isOn{
+        } catch {
+            //        som
+            if switchSom.isOn{
+                
+                content.sound = UNNotificationSound.default
+            }
             
-            content.sound = UNNotificationSound.default
-        }
-        
-        //        Notification
-        if switchNotification.isOn == false {
-            notificationCenter.removeDeliveredNotifications(withIdentifiers: ["NotificacaoCell"])
+            //        Notification
+            if switchNotification.isOn == false {
+                notificationCenter.removeDeliveredNotifications(withIdentifiers: ["NotificacaoCell"])
+                
+            }
             
-        }
-
-        //Nas variáveis abaixo definimos o corpo da mensagem
-        var not = InternNotif.getAllNotif()
-        
-        let notram = not[Int.random(in: 0..<7)]
-        
-        
-        let titulo = notram.titulo
-        let subtitulo = ""
-        let mensagem = notram.descricao
-        
-        //O identificador serve para o caso de queremos identificar uma notificação especifica
-        let identificador = "identifier\(Int.random(in: 0..<7))"
-        
-        var tempo:TimeInterval = 1
-        
-        if pickerSelectedTempo == self.tempo[0] {
+            //Nas variáveis abaixo definimos o corpo da mensagem
+            let not = InternNotif.getAllNotif()
+            let notram = not[Int.random(in: 0..<7)]
+            let titulo = notram.titulo
+            let subtitulo = ""
+            let mensagem = notram.descricao
             
-            print("horas")
-            tempo = tempo * 3600 * Double(pickerSelectedVezes)!
+            //O identificador serve para o caso de queremos identificar uma notificação especifica
+            let identificador = "identifier\(Int.random(in: 0..<7))"
+            var tempo:TimeInterval = 1
+            if pickerSelectedTempo == self.tempo[0] {
+                print("horas")
+                tempo = tempo * 3600 * Double(pickerSelectedVezes)!
+                
+            } else if pickerSelectedTempo == self.tempo[1] {
+                print("dias")
+                tempo = tempo * 86400 * Double(pickerSelectedVezes)!
+            } else {
+                print("meses")
+                tempo = tempo * 2628000 * Double(pickerSelectedVezes)!
+            }
             
-        } else if pickerSelectedTempo == self.tempo[1] {
-            print("dias")
-            tempo = tempo * 86400 * Double(pickerSelectedVezes)!
-        } else {
-            print("meses")
-            tempo = tempo * 2628000 * Double(pickerSelectedVezes)!
-        }
-        
-        self.appDelegate?.enviarNotificacao(titulo, subtitulo, mensagem, identificador, tempo)
-        
-        navigationController?.popViewController(animated: true)
-        
+            self.appDelegate?.enviarNotificacao(titulo, subtitulo, mensagem, identificador, tempo)
+            navigationController?.popViewController(animated: true)
         }
     }
     
@@ -132,7 +122,6 @@ class NotificacoesTVC: UITableViewController, UIPickerViewDelegate, UIPickerView
         else{
             self.pickerSelectedTempo = self.tempo[row]
         }
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -151,12 +140,12 @@ class NotificacoesTVC: UITableViewController, UIPickerViewDelegate, UIPickerView
         label.font = UIFont(name: "Anonymous Pro", size: 20)
         
         if component == 0{
-        label.text = vezes[row]
+            label.text = vezes[row]
         }
         else {
             label.text = tempo[row]
         }
         return label
-            
+        
     }
 }

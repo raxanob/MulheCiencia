@@ -115,11 +115,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
-
-
-
-
-
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func enviarNotificacao(_ titulo:String, _ subtitulo:String, _ mensagem:String, _ identificador:String, _ tempo:TimeInterval) {
@@ -148,11 +143,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             if let error = error {
                 print("Deu ruim: \(error.localizedDescription)")
             }
-        }
-        
-        
-        
-        
+        }  
     }
     
     //Quando a notificacao é enviada e o aplicativo está aberto
